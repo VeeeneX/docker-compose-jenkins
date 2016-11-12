@@ -9,6 +9,8 @@ services:
       - 80:8080
     volumes:
       - jenkins-storage:/var/jenkins_home
+    environment:
+      VIRTUAL_HOST: jenkins.dev
 
 networks:
   jenkins:
