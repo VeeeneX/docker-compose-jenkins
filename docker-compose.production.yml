@@ -8,6 +8,8 @@ services:
     ports:
       - 50000:50000
       - 80:8080
+    networks:
+      - jenkins
     volumes:
       - jenkins-storage:/var/jenkins_home
     environment:
