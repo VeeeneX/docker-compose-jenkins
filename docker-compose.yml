@@ -12,7 +12,6 @@ services:
       - jenkins-storage:/var/jenkins_home
     environment:
       VIRTUAL_HOST: jenkins.dev
-      JENKINS_OPTS: --httpPort=80
       JAVA_OPTS: -Dhudson.footerURL=http://jenkins.dev
 
 networks:
