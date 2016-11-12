@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  jenkins:
+    image: jenkins:latest
+    container_name: jenkins
+    restart: always
+    ports:
+      - 50000:50000
+      - 80:8080
+    volumes:
+      - jenkins-storage:/var/jenkins_home
+    environment:
+      VIRTUAL_HOST: jenkins.dev
+
+networks:
+  jenkins:
+
+volumes:
+  jenkins-storage:
+      driver: local
